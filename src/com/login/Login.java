@@ -15,11 +15,11 @@ import javax.servlet.http.HttpSession;
 public class Login extends HttpServlet {
 
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String uname=request.getParameter("uname");
 		String pass=request.getParameter("pass");
 		
-		if(uname.equals("telusko")&&pass.equals("learnings"))
+		if(uname.equals("telusko")&&pass.equals("l"))
 				{
 			HttpSession session=request.getSession();
 			session.setAttribute("username", uname);
